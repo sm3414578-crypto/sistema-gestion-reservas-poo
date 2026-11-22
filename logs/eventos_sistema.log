@@ -1,0 +1,25 @@
+[2026-11-22 07:10:09] [INFO] [SISTEMA] Software F iniciado sin base de datos.
+[2026-11-22 07:10:09] [INFO] [CLIENTES] Cliente registrado: Cliente [CLI-001] - Laura Gómez | Correo: laura.gomez@correo.com | Tel: 3104567890
+[2026-11-22 07:10:09] [DEBUG] [CLIENTES] Total de clientes en memoria: 1
+[2026-11-22 07:10:09] [INFO] [CLIENTES] Cliente registrado: Cliente [CLI-002] - Carlos Ruiz | Correo: carlos.ruiz@empresa.co | Tel: 3159876543
+[2026-11-22 07:10:09] [DEBUG] [CLIENTES] Total de clientes en memoria: 2
+[2026-11-22 07:10:09] [ERROR] [SIMULACION] Op 3 fallida: El correo electrónico 'correo_sin_arroba' no tiene un formato válido.
+[2026-11-22 07:10:09] [INFO] [SERVICIOS] Servicio registrado: Sala [SRV-SALA-1] 'Sala Ejecutiva A' | Capacidad: 12 (con proyector) | Tarifa: $45000.0/h
+[2026-11-22 07:10:09] [DEBUG] [SERVICIOS] Total de servicios en memoria: 1
+[2026-11-22 07:10:09] [INFO] [SERVICIOS] Servicio registrado: Equipo [SRV-EQ-1] 'Portátiles Empresariales' | Categoría: Cómputo | Unidades: 3 | Tarifa: $12000.0/u/h
+[2026-11-22 07:10:09] [DEBUG] [SERVICIOS] Total de servicios en memoria: 2
+[2026-11-22 07:10:09] [INFO] [SERVICIOS] Servicio registrado: Asesoría [SRV-ASE-1] 'Consultoría de Arquitectura' | Especialidad: Software (Senior) | Tarifa: $80000.0/h
+[2026-11-22 07:10:09] [DEBUG] [SERVICIOS] Total de servicios en memoria: 3
+[2026-11-22 07:10:09] [ERROR] [CLIENTES] Ya existe un cliente con el ID 'CLI-001'.
+[2026-11-22 07:10:09] [DEBUG] [CLIENTES] Total de clientes en memoria: 2
+[2026-11-22 07:10:09] [INFO] [RESERVAS] Reserva confirmada: Reserva [RES-001] | Estado: CONFIRMADA | Cliente: Laura Gómez | Servicio: Sala Ejecutiva A | Duración: 3h | Total: $160,650.00
+[2026-11-22 07:10:09] [DEBUG] [RESERVAS] Total de reservas en memoria: 1
+[2026-11-22 07:10:09] [INFO] [RESERVAS] Reserva confirmada: Reserva [RES-002] | Estado: CONFIRMADA | Cliente: Carlos Ruiz | Servicio: Consultoría de Arquitectura | Duración: 2h | Total: $200,000.00
+[2026-11-22 07:10:09] [DEBUG] [RESERVAS] Total de reservas en memoria: 2
+[2026-11-22 07:10:09] [ERROR] [RESERVAS] Error al procesar la reserva 'RES-003': Servicio con ID 'SRV-NO-EXISTE' no encontrado. | Causa encadenada (ErrorServicioNoDisponible): Servicio con ID 'SRV-NO-EXISTE' no encontrado.
+[2026-11-22 07:10:09] [DEBUG] [RESERVAS] Total de reservas en memoria: 2
+[2026-11-22 07:10:09] [ERROR] [RESERVAS] Error al procesar la reserva 'RES-004': Cliente con ID 'CLI-999' no encontrado. | Causa encadenada (ErrorClienteInvalido): Cliente con ID 'CLI-999' no encontrado.
+[2026-11-22 07:10:09] [DEBUG] [RESERVAS] Total de reservas en memoria: 2
+[2026-11-22 07:10:09] [INFO] [RESERVAS] Reserva procesada: RES-001
+[2026-11-22 07:10:09] [ERROR] [RESERVAS] No se puede cancelar la reserva RES-001 porque ya fue PROCESADA.
+[2026-11-22 07:10:09] [INFO] [RESERVAS] Reserva cancelada (RES-002): Reprogramación solicitada por el cliente
