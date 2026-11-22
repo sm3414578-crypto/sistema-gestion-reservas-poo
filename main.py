@@ -13,7 +13,7 @@ def ejecutar_simulacion() -> None:
 
     # Operación 1 [ÉXITO]: Crear y registrar un cliente válido.
     try:
-        cliente_1 = Cliente("CLI-001", "Laura Gómez", "laura.gomez@correo.com", "3104567890")
+        cliente_1 = Cliente("CLI-001", "valentina mendoza", "cvmendoza@correo.com", "3104567890")
         ok_1 = gestor.registrar_cliente(cliente_1)
         print(f"[Op 1 - Éxito] Registro cliente CLI-001: {ok_1} | {cliente_1.obtener_resumen()}")
     except ErrorSistemaBase as err:
@@ -21,7 +21,7 @@ def ejecutar_simulacion() -> None:
 
     # Operación 2 [ÉXITO]: Crear y registrar un segundo cliente válido.
     try:
-        cliente_2 = Cliente("CLI-002", "Carlos Ruiz", "carlos.ruiz@empresa.co", "3159876543")
+        cliente_2 = Cliente("CLI-002", "sergio molano", "sm3414578@correo.com", "3159876543")
         ok_2 = gestor.registrar_cliente(cliente_2)
         print(f"[Op 2 - Éxito] Registro cliente CLI-002: {ok_2} | {cliente_2.obtener_resumen()}")
     except ErrorSistemaBase as err:
@@ -29,7 +29,7 @@ def ejecutar_simulacion() -> None:
 
     # Operación 3 [FALLO VALIDACIÓN]: Intentar crear un cliente con correo inválido.
     try:
-        cliente_invalido = Cliente("CLI-003", "Andrés Soto", "correo_sin_arroba", "3001112233")
+        cliente_invalido = Cliente("CLI-003", "carlos molano", "correo_sin_arroba", "3001112233")
         gestor.registrar_cliente(cliente_invalido)
     except ErrorValidacionDatos as err:
         gestor._GestorSoftwareF__logger.registrar_evento("ERROR", "SIMULACION", f"Op 3 fallida: {err}")
@@ -45,7 +45,7 @@ def ejecutar_simulacion() -> None:
     print(f"[Op 4 - Éxito] Servicios registrados -> Sala: {r_sala}, Equipo: {r_equipo}, Asesoría: {r_asesoria}")
 
     # Operación 5 [FALLO NEGOCIO]: Intentar registrar un cliente con ID duplicado.
-    cliente_duplicado = Cliente("CLI-001", "Laura Duplicada", "duplicada@correo.com", "3104567890")
+    cliente_duplicado = Cliente("CLI-001", "valentina Duplicada", "duplicada@correo.com", "3104567890")
     dup_ok = gestor.registrar_cliente(cliente_duplicado)
     print(f"[Op 5 - Fallo esperado] Registro duplicado CLI-001 rechazado: {dup_ok}")
 
