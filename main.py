@@ -36,8 +36,8 @@ def ejecutar_simulacion() -> None:
         print(f"[Op 3 - Fallo esperado] Validación de cliente rechazada: {err}")
 
     # Operación 4 [ÉXITO]: Registrar tres servicios especializados (Sala, Equipo, Asesoría).
-    sala = ReservaSala("SRV-SALA-1", "Sala Ejecutiva A", 45000.0, capacidad_personas=12, tiene_proyector=True)
-    equipo = AlquilerEquipo("SRV-EQ-1", "Portátiles Empresariales", 12000.0, "Cómputo", cantidad_unidades=3)
+    sala = ReservaSala("SRV-SALA-1", "Sala Ejecutiva A", 50000.0, capacidad_personas=12, tiene_proyector=True)
+    equipo = AlquilerEquipo("SRV-EQ-1", "Portátiles Empresariales", 15000.0, "Cómputo", cantidad_unidades=3)
     asesoria = AsesoriaEspecializada("SRV-ASE-1", "Consultoría de Arquitectura", 80000.0, "Software", nivel_senior=True)
     r_sala = gestor.registrar_servicio(sala)
     r_equipo = gestor.registrar_servicio(equipo)
